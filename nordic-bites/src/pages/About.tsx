@@ -4,7 +4,7 @@ function About() {
       <h2>Um okkur</h2>
 
       <p>
-        Velkomin á Nordic Bite – fjölskyldurekinn
+        Velkomin á Nordic Bite - fjölskyldurekinn
         veitingastað sem leggur áherslu á ferskt
         hráefni og norræna matarmenningu.
       </p>
