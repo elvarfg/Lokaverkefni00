@@ -1,19 +1,18 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 import logo from "../assets/images/nordicbiteslogo.png";
 
 function Header() {
   return (
     <header className="header">
-      <div className="logo-container">
+      <Link to="/" className="logo-container">
         <img
           src={logo}
           alt="Nordic Bite logo"
           className="logo"
         />
 
-        <h1>Nordic Bite</h1>
-      </div>
+      </Link>
 
       <nav>
         <NavLink to="/">Home</NavLink>
