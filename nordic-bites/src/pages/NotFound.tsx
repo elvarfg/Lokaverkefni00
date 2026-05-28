@@ -3,13 +3,19 @@ import { Link } from "react-router-dom";
 function NotFound() {
   return (
     <section className="not-found">
-      <h1>404</h1>
+      <div className="not-found-card">
+        <p className="not-found-code">404</p>
 
-      <p>Síðan fannst ekki.</p>
+        <h1>Úps! Síðan fannst ekki</h1>
 
-      <Link to="/">
-        Fara á forsíðu
-      </Link>
+        <p>
+          Síðan sem þú ert að leita að virðist ekki vera á matseðlinum.
+        </p>
+
+        <Link to="/" className="not-found-button">
+          Fara á forsíðu
+        </Link>
+      </div>
     </section>
   );
 }

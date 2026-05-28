@@ -55,7 +55,7 @@ h4 {
 }
 
 .logo {
-  height: 240px;
+  height: 110px;
   width: auto;
 
   object-fit: contain;
@@ -225,4 +225,87 @@ button {
   padding: 1rem 0;
 
   border-bottom: 1px solid #ccc;
+}
+
+.not-found {
+  min-height: calc(100vh - 80px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2rem;
+
+  background:
+    linear-gradient(rgba(29, 49, 36, 0.8), rgba(29, 49, 36, 0.8)),
+    url("../assets/images/hero.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.not-found-card {
+  max-width: 600px;
+
+  padding: 3rem 2rem;
+
+  text-align: center;
+
+  background: rgba(248, 245, 240, 0.95);
+  color: #1d3124;
+
+  border-radius: 24px;
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.not-found-code {
+  font-size: 6rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+
+  line-height: 1;
+
+  margin-bottom: 1rem;
+}
+
+.not-found-card h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.not-found-card p {
+  margin-bottom: 2rem;
+}
+
+.not-found-button {
+  display: inline-block;
+
+  padding: 1rem 2rem;
+
+  background: #1d3124;
+  color: white;
+
+  text-decoration: none;
+  font-weight: 600;
+
+  border-radius: 999px;
+
+  transition: 0.3s ease;
+}
+
+.not-found-button:hover {
+  background: #2f4f3a;
+
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .not-found-code {
+    font-size: 4.5rem;
+  }
+
+  .not-found-card h1 {
+    font-size: 2rem;
+  }
 }
