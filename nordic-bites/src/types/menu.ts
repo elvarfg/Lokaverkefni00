@@ -5,5 +5,7 @@ export type MenuItem = {
 
 export type MenuCategory = {
   category: string;
+  description: string;
+
   items: MenuItem[];
 };

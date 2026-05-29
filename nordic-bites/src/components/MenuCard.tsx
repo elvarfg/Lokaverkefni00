@@ -9,9 +9,11 @@ function MenuCard({
 }: MenuCardProps) {
   return (
     <div className="menu-card">
-      <h4>{name}</h4>
+      <div>
+        <h4>{name}</h4>
+      </div>
 
-      <p>{price}</p>
+      <span>{price}</span>
     </div>
   );
 }
