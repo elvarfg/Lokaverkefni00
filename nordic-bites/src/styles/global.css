@@ -511,8 +511,150 @@ nav a:hover {
   }
 }
 
+
 .intro {
   padding: 4rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro p {
+  color: #4a4a4a;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.features-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 2rem 5rem;
+}
+
+.feature-card {
+  padding: 2rem;
+  text-align: center;
+
+  background: white;
+  border-radius: 24px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.feature-card span {
+  font-size: 2.5rem;
+}
+
+.feature-card h3 {
+  margin: 1rem 0;
+  color: #1d3124;
+}
+
+.feature-card p {
+  color: #666;
+  line-height: 1.7;
+}
+
+.popular-section {
+  padding: 5rem 2rem;
+  background: #ede7dd;
+}
+
+.popular-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.popular-card {
+  padding: 2rem;
+
+  background: white;
+  border-radius: 24px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.popular-card h3 {
+  margin-bottom: 1rem;
+  color: #1d3124;
+}
+
+.popular-card p {
+  margin-bottom: 1.5rem;
+  color: #666;
+  line-height: 1.7;
+}
+
+.popular-card span {
+  font-weight: 700;
+  color: #1d3124;
+}
+
+.home-cta {
+  padding: 6rem 2rem;
+
+  text-align: center;
+
+  background: #1d3124;
+  color: white;
+}
+
+.home-cta h2 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+.home-cta p {
+  margin-bottom: 2rem;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.cta-buttons a {
+  padding: 1rem 2rem;
+
+  border-radius: 999px;
+
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.cta-buttons a:first-child {
+  background: white;
+  color: #1d3124;
+}
+
+.cta-buttons a:last-child {
+  border: 1px solid white;
+  color: white;
+}
+
+@media (max-width: 900px) {
+  .features-section,
+  .popular-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-cta h2 {
+    font-size: 2.2rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .menu-items {
