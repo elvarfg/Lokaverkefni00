@@ -16,18 +16,19 @@ function ContactForm() {
   });
 
   const [errors, setErrors] = useState<Partial<FormData>>({});
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   function handleChange(
     e: React.ChangeEvent<
-      HTMLInputElement |
-      HTMLTextAreaElement |
-      HTMLSelectElement
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
   ) {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
+
+    setIsSubmitted(false);
   }
 
   function handleSubmit(e: React.FormEvent) {
@@ -39,7 +40,9 @@ function ContactForm() {
       newErrors.name = "Nafn er skilyrt";
     }
 
-    if (!formData.email.includes("@")) {
+    if (!formData.email.trim()) {
+      newErrors.email = "Netfang er skilyrt";
+    } else if (!formData.email.includes("@")) {
       newErrors.email = "Netfang er ekki gilt";
     }
 
@@ -50,34 +53,44 @@ function ContactForm() {
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
-      alert("Skilaboð send!");
+      setIsSubmitted(true);
+
+      setFormData({
+        name: "",
+        email: "",
+        subject: "Almenn fyrirspurn",
+        message: "",
+      });
     }
   }
 
   return (
     <form onSubmit={handleSubmit}>
+      {isSubmitted && (
+        <div className="success-message">
+          Takk fyrir skilaboðin! Við svörum eins fljótt og við getum.
+        </div>
+      )}
+
       <input
         type="text"
         name="name"
         placeholder="Nafn"
+        value={formData.name}
         onChange={handleChange}
       />
-
-      {errors.name && <p>{errors.name}</p>}
+      {errors.name && <p className="error-message">{errors.name}</p>}
 
       <input
         type="email"
         name="email"
         placeholder="Netfang"
+        value={formData.email}
         onChange={handleChange}
       />
+      {errors.email && <p className="error-message">{errors.email}</p>}
 
-      {errors.email && <p>{errors.email}</p>}
-
-      <select
-        name="subject"
-        onChange={handleChange}
-      >
+      <select name="subject" value={formData.subject} onChange={handleChange}>
         <option>Almenn fyrirspurn</option>
         <option>Bókanir</option>
         <option>Fyrirtækjaþjónusta</option>
@@ -86,14 +99,13 @@ function ContactForm() {
       <textarea
         name="message"
         placeholder="Skilaboð"
+        value={formData.message}
         onChange={handleChange}
       />
 
-      {errors.message && <p>{errors.message}</p>}
+      {errors.message && <p className="error-message">{errors.message}</p>}
 
-      <button type="submit">
-        Senda
-      </button>
+      <button type="submit">Senda</button>
     </form>
   );
 }

@@ -41,6 +41,15 @@ function Contact() {
         <div className="contact-form-card">
           <ContactForm />
         </div>
+
+<div className="map-card">
+  <iframe
+    title="Nordic Bite staðsetning"
+    src="https://www.google.com/maps?q=Matarvegur%2012,%20101%20Reykjav%C3%ADk&output=embed"
+    loading="lazy"
+  ></iframe>
+</div>
+
       </div>
     </section>
   );

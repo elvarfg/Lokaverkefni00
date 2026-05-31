@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
 import SectionTitle from "../components/SectionTitle";
 
+import salmonImg from "../assets/images/salmon.jpg";
+import paniniImg from "../assets/images/panini.jpg";
+import friesImg from "../assets/images/fries.jpg";
+
 function Home() {
   return (
     <>
@@ -49,24 +53,36 @@ function Home() {
         />
 
         <div className="popular-grid">
-          <div className="popular-card">
-            <h3>Lax með sítrónusósu</h3>
-            <p>Ferskur lax með mildri sítrónusósu og meðlæti.</p>
-            <span>5.690 kr</span>
-          </div>
+  <div className="popular-card">
+    <img src={salmonImg} alt="Lax með sítrónusósu" />
 
-          <div className="popular-card">
-            <h3>Kjúklingapanini</h3>
-            <p>Stökkt panini með kjúklingi, mozzarella og fersku grænmeti.</p>
-            <span>2.990 kr</span>
-          </div>
+    <div className="popular-card-content">
+      <h3>Lax með sítrónusósu</h3>
+      <p>Ferskur lax með mildri sítrónusósu og meðlæti.</p>
+      <span>5.690 kr</span>
+    </div>
+  </div>
 
-          <div className="popular-card">
-            <h3>Sætar kartöflufranskar</h3>
-            <p>Fullkomið meðlæti með öllum helstu réttum.</p>
-            <span>1.590 kr</span>
-          </div>
-        </div>
+  <div className="popular-card">
+    <img src={paniniImg} alt="Kjúklingapanini" />
+
+    <div className="popular-card-content">
+      <h3>Kjúklingapanini</h3>
+      <p>Stökkt panini með kjúklingi, mozzarella og fersku grænmeti.</p>
+      <span>2.990 kr</span>
+    </div>
+  </div>
+
+  <div className="popular-card">
+    <img src={friesImg} alt="Sætar kartöflufranskar" />
+
+    <div className="popular-card-content">
+      <h3>Sætar kartöflufranskar</h3>
+      <p>Fullkomið meðlæti með öllum helstu réttum.</p>
+      <span>1.590 kr</span>
+    </div>
+  </div>
+</div>
       </section>
 
       <section className="home-cta">

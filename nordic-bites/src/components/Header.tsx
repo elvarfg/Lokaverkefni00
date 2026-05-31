@@ -27,21 +27,37 @@ function Header() {
       </button>
 
       <nav className={menuOpen ? "nav nav-open" : "nav"}>
-        <NavLink to="/" onClick={closeMenu}>
-          Home
-        </NavLink>
+<NavLink
+  to="/"
+  onClick={closeMenu}
+  className={({ isActive }) => (isActive ? "active-link" : "")}
+>
+  Home
+</NavLink>
 
-        <NavLink to="/menu" onClick={closeMenu}>
-          Menu
-        </NavLink>
+<NavLink
+  to="/menu"
+  onClick={closeMenu}
+  className={({ isActive }) => (isActive ? "active-link" : "")}
+>
+  Menu
+</NavLink>
 
-        <NavLink to="/about" onClick={closeMenu}>
-          About
-        </NavLink>
+<NavLink
+  to="/about"
+  onClick={closeMenu}
+  className={({ isActive }) => (isActive ? "active-link" : "")}
+>
+  About
+</NavLink>
 
-        <NavLink to="/contact" onClick={closeMenu}>
-          Contact
-        </NavLink>
+<NavLink
+  to="/contact"
+  onClick={closeMenu}
+  className={({ isActive }) => (isActive ? "active-link" : "")}
+>
+  Contact
+</NavLink>
       </nav>
     </header>
   );
