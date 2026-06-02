@@ -10,10 +10,7 @@ type HeaderProps = {
   onToggleTheme: () => void;
 };
 
-function Header({
-  isDarkMode,
-  onToggleTheme,
-}: HeaderProps) {
+function Header({ isDarkMode, onToggleTheme }: HeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   function closeMenu() {
@@ -22,42 +19,29 @@ function Header({
 
   return (
     <header className="header">
-      <Link
-        to="/"
-        className="logo-container"
-        onClick={closeMenu}
-      >
-        <img
-          src={logo}
-          alt="Nordic Bite logo"
-          className="logo"
-        />
+      <Link to="/" className="logo-container" onClick={closeMenu}>
+        <img src={logo} alt="Nordic Bite logo" className="logo" />
       </Link>
 
       <div className="header-controls">
-        <ThemeToggle
-          isDarkMode={isDarkMode}
-          onToggle={onToggleTheme}
-        />
+        <ThemeToggle isDarkMode={isDarkMode} onToggle={onToggleTheme} />
 
         <button
-  className={menuOpen ? "hamburger hamburger-open" : "hamburger"}
-  onClick={() => setMenuOpen(!menuOpen)}
-  aria-label="Open navigation menu"
->
-  <span></span>
-  <span></span>
-  <span></span>
-</button>
+          className={menuOpen ? "hamburger hamburger-open" : "hamburger"}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Open navigation menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
 
       <nav className={menuOpen ? "nav nav-open" : "nav"}>
         <NavLink
           to="/"
           onClick={closeMenu}
-          className={({ isActive }) =>
-            isActive ? "active-link" : ""
-          }
+          className={({ isActive }) => (isActive ? "active-link" : "")}
         >
           Home
         </NavLink>
@@ -65,9 +49,7 @@ function Header({
         <NavLink
           to="/menu"
           onClick={closeMenu}
-          className={({ isActive }) =>
-            isActive ? "active-link" : ""
-          }
+          className={({ isActive }) => (isActive ? "active-link" : "")}
         >
           Menu
         </NavLink>
@@ -75,9 +57,7 @@ function Header({
         <NavLink
           to="/about"
           onClick={closeMenu}
-          className={({ isActive }) =>
-            isActive ? "active-link" : ""
-          }
+          className={({ isActive }) => (isActive ? "active-link" : "")}
         >
           About
         </NavLink>
@@ -85,9 +65,7 @@ function Header({
         <NavLink
           to="/contact"
           onClick={closeMenu}
-          className={({ isActive }) =>
-            isActive ? "active-link" : ""
-          }
+          className={({ isActive }) => (isActive ? "active-link" : "")}
         >
           Contact
         </NavLink>

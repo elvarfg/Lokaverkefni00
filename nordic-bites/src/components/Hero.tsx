@@ -6,9 +6,7 @@ function Hero() {
       <div className="hero-content">
         <h2>Góður matur – góð stund</h2>
 
-        <p>
-          Njóttu norrænnar matargerðar í hlýlegu og nútímalegu umhverfi.
-        </p>
+        <p>Njóttu norrænnar matargerðar í hlýlegu og nútímalegu umhverfi.</p>
 
         <Link to="/menu" className="hero-button">
           Skoða matseðil

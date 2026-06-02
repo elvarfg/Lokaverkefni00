@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 import Hero from "../components/Hero";
 import SectionTitle from "../components/SectionTitle";
+import PageWrapper from "../components/PageWrapper";
 
 import salmonImg from "../assets/images/salmon.jpg";
 import paniniImg from "../assets/images/panini.jpg";
@@ -9,7 +10,7 @@ import friesImg from "../assets/images/fries.jpg";
 
 function Home() {
   return (
-    <>
+    <PageWrapper>
       <Hero />
 
       <section className="intro">
@@ -53,40 +54,41 @@ function Home() {
         />
 
         <div className="popular-grid">
-  <div className="popular-card">
-    <img src={salmonImg} alt="Lax með sítrónusósu" />
+          <div className="popular-card">
+            <img src={salmonImg} alt="Lax með sítrónusósu" />
 
-    <div className="popular-card-content">
-      <h3>Lax með sítrónusósu</h3>
-      <p>Ferskur lax með mildri sítrónusósu og meðlæti.</p>
-      <span>5.690 kr</span>
-    </div>
-  </div>
+            <div className="popular-card-content">
+              <h3>Lax með sítrónusósu</h3>
+              <p>Ferskur lax með mildri sítrónusósu og meðlæti.</p>
+              <span>5.690 kr</span>
+            </div>
+          </div>
 
-  <div className="popular-card">
-    <img src={paniniImg} alt="Kjúklingapanini" />
+          <div className="popular-card">
+            <img src={paniniImg} alt="Kjúklingapanini" />
 
-    <div className="popular-card-content">
-      <h3>Kjúklingapanini</h3>
-      <p>Stökkt panini með kjúklingi, mozzarella og fersku grænmeti.</p>
-      <span>2.990 kr</span>
-    </div>
-  </div>
+            <div className="popular-card-content">
+              <h3>Kjúklingapanini</h3>
+              <p>Stökkt panini með kjúklingi, mozzarella og fersku grænmeti.</p>
+              <span>2.990 kr</span>
+            </div>
+          </div>
 
-  <div className="popular-card">
-    <img src={friesImg} alt="Sætar kartöflufranskar" />
+          <div className="popular-card">
+            <img src={friesImg} alt="Sætar kartöflufranskar" />
 
-    <div className="popular-card-content">
-      <h3>Sætar kartöflufranskar</h3>
-      <p>Fullkomið meðlæti með öllum helstu réttum.</p>
-      <span>1.590 kr</span>
-    </div>
-  </div>
-</div>
+            <div className="popular-card-content">
+              <h3>Sætar kartöflufranskar</h3>
+              <p>Fullkomið meðlæti með öllum helstu réttum.</p>
+              <span>1.590 kr</span>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className="home-cta">
         <h2>Tilbúin/n í góða stund?</h2>
+
         <p>Skoðaðu matseðilinn okkar eða hafðu samband til að bóka borð.</p>
 
         <div className="cta-buttons">
@@ -94,7 +96,7 @@ function Home() {
           <Link to="/contact">Hafa samband</Link>
         </div>
       </section>
-    </>
+    </PageWrapper>
   );
 }
 

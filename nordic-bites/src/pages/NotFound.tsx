@@ -8,9 +8,7 @@ function NotFound() {
 
         <h1>Úps! Síðan fannst ekki</h1>
 
-        <p>
-          Síðan sem þú ert að leita að virðist ekki vera á matseðlinum.
-        </p>
+        <p>Síðan sem þú ert að leita að virðist ekki vera á matseðlinum.</p>
 
         <Link to="/" className="not-found-button">
           Fara á forsíðu

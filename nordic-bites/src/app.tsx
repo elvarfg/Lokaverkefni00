@@ -16,10 +16,7 @@ function App() {
     <div className={isDarkMode ? "app dark-mode" : "app"}>
       <ScrollToTop />
 
-      <Header
-        isDarkMode={isDarkMode}
-        onToggleTheme={toggleTheme}
-      />
+      <Header isDarkMode={isDarkMode} onToggleTheme={toggleTheme} />
 
       <main>
         <Outlet />

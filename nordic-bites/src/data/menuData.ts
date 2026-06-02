@@ -3,8 +3,7 @@ import type { MenuCategory } from "../types/menu";
 const menuItems: MenuCategory[] = [
   {
     category: "Forréttir",
-    description:
-      "Léttir og ferskir réttir til að byrja máltíðina.",
+    description: "Léttir og ferskir réttir til að byrja máltíðina.",
 
     items: [
       {
@@ -24,8 +23,7 @@ const menuItems: MenuCategory[] = [
 
   {
     category: "Aðalréttir",
-    description:
-      "Matarmiklir réttir úr fersku hráefni.",
+    description: "Matarmiklir réttir úr fersku hráefni.",
 
     items: [
       {
@@ -45,8 +43,7 @@ const menuItems: MenuCategory[] = [
 
   {
     category: "Vefjur og samlokur",
-    description:
-      "Gott í hádeginu eða þegar þig langar í eitthvað fljótlegt.",
+    description: "Gott í hádeginu eða þegar þig langar í eitthvað fljótlegt.",
 
     items: [
       {
@@ -66,8 +63,7 @@ const menuItems: MenuCategory[] = [
 
   {
     category: "Meðlæti",
-    description:
-      "Smáréttir sem passa vel með öllum aðalréttum.",
+    description: "Smáréttir sem passa vel með öllum aðalréttum.",
 
     items: [
       {

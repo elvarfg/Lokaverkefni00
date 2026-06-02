@@ -3,10 +3,7 @@ type MenuCardProps = {
   price: string;
 };
 
-function MenuCard({
-  name,
-  price,
-}: MenuCardProps) {
+function MenuCard({ name, price }: MenuCardProps) {
   return (
     <div className="menu-card">
       <div>
