@@ -23,31 +23,44 @@ function ContactForm() {
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >,
   ) {
+    const { name, value } = e.target;
+
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [name]: value,
     });
+
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      [name]: "",
+    }));
 
     setIsSubmitted(false);
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  function handleSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
     e.preventDefault();
 
     const newErrors: Partial<FormData> = {};
 
-    if (!formData.name.trim()) {
-      newErrors.name = "Nafn er skilyrt";
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (formData.name.trim().length < 2) {
+      newErrors.name = "Nafn þarf að vera að minnsta kosti 2 stafir.";
     }
 
     if (!formData.email.trim()) {
-      newErrors.email = "Netfang er skilyrt";
-    } else if (!formData.email.includes("@")) {
-      newErrors.email = "Netfang er ekki gilt";
+      newErrors.email = "Netfang er skilyrt.";
+    } else if (!emailRegex.test(formData.email)) {
+      newErrors.email = "Sláðu inn gilt netfang.";
     }
 
-    if (!formData.message.trim()) {
-      newErrors.message = "Skilaboð vantar";
+    if (!formData.subject) {
+      newErrors.subject = "Veldu tegund fyrirspurnar.";
+    }
+
+    if (formData.message.trim().length < 10) {
+      newErrors.message = "Skilaboð þurfa að vera að minnsta kosti 10 stafir.";
     }
 
     setErrors(newErrors);
@@ -78,6 +91,8 @@ function ContactForm() {
         placeholder="Nafn"
         value={formData.name}
         onChange={handleChange}
+        required
+        aria-label="Nafn"
       />
       {errors.name && <p className="error-message">{errors.name}</p>}
 
@@ -87,20 +102,32 @@ function ContactForm() {
         placeholder="Netfang"
         value={formData.email}
         onChange={handleChange}
+        required
+        aria-label="Netfang"
       />
       {errors.email && <p className="error-message">{errors.email}</p>}
 
-      <select name="subject" value={formData.subject} onChange={handleChange}>
-        <option>Almenn fyrirspurn</option>
-        <option>Bókanir</option>
-        <option>Fyrirtækjaþjónusta</option>
+      <select
+        name="subject"
+        value={formData.subject}
+        onChange={handleChange}
+        required
+        aria-label="Tegund fyrirspurnar"
+      >
+        <option value="Almenn fyrirspurn">Almenn fyrirspurn</option>
+        <option value="Bókanir">Bókanir</option>
+        <option value="Fyrirtækjaþjónusta">Fyrirtækjaþjónusta</option>
       </select>
+
+      {errors.subject && <p className="error-message">{errors.subject}</p>}
 
       <textarea
         name="message"
         placeholder="Skilaboð"
         value={formData.message}
         onChange={handleChange}
+        required
+        aria-label="Skilaboð"
       />
 
       {errors.message && <p className="error-message">{errors.message}</p>}

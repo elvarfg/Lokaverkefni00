@@ -78,7 +78,9 @@ src
 │   └── images
 │
 ├── components
+│   ├── BackToTop.tsx
 │   ├── ContactForm.tsx
+│   ├── Counter.tsx
 │   ├── Footer.tsx
 │   ├── Header.tsx
 │   ├── Hero.tsx
@@ -92,18 +94,21 @@ src
 │   └── menuData.ts
 │
 ├── pages
-│   ├── Home.tsx
-│   ├── Menu.tsx
 │   ├── About.tsx
 │   ├── Contact.tsx
+│   ├── Home.tsx
+│   ├── Menu.tsx
 │   └── NotFound.tsx
+│
+├── styles
+│   └── global.css
 │
 ├── types
 │   └── menu.ts
 │
 ├── App.tsx
 ├── main.tsx
-└── global.css
+└── router.tsx
 ```
 
 ---
@@ -119,7 +124,7 @@ git clone <repository-url>
 Fara inn í verkefnið:
 
 ```bash
-cd nordic-bite
+cd nordic-bites
 ```
 
 Setja upp pakka:

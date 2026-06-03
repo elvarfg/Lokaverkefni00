@@ -6,6 +6,25 @@ import MenuCard from "../components/MenuCard";
 import SectionTitle from "../components/SectionTitle";
 import PageWrapper from "../components/PageWrapper";
 
+function getCategoryIcon(category: string) {
+  switch (category) {
+    case "Forréttir":
+      return "🥗";
+
+    case "Aðalréttir":
+      return "🍽️";
+
+    case "Vefjur og samlokur":
+      return "🌯";
+
+    case "Meðlæti":
+      return "🍟";
+
+    default:
+      return "🍴";
+  }
+}
+
 function Menu() {
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -36,6 +55,7 @@ function Menu() {
             placeholder="Leita að rétti..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
+            aria-label="Leita að rétti"
           />
         </div>
 
@@ -43,7 +63,13 @@ function Menu() {
           <div className="menu-categories">
             {filteredMenuItems.map((category) => (
               <div className="menu-category-card" key={category.category}>
-                <h3>{category.category}</h3>
+                <h3>
+                  <span className="category-icon">
+                    {getCategoryIcon(category.category)}
+                  </span>
+
+                  {category.category}
+                </h3>
 
                 <p className="category-description">{category.description}</p>
 

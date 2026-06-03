@@ -29,6 +29,24 @@ function Footer() {
           <p>Mán - Fös: 11:00 - 22:00</p>
           <p>Lau - Sun: 12:00 - 23:00</p>
         </div>
+
+        <div>
+          <h4>Fylgdu okkur</h4>
+
+          <div className="social-links">
+            <a href="#" aria-label="Facebook">
+              📘 Facebook
+            </a>
+
+            <a href="#" aria-label="Instagram">
+              📷 Instagram
+            </a>
+
+            <a href="#" aria-label="TikTok">
+              🎵 TikTok
+            </a>
+          </div>
+        </div>
       </div>
 
       <div className="footer-bottom">

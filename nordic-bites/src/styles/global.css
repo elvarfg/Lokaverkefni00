@@ -672,6 +672,10 @@ main {
   border-bottom: 2px solid #d7d0c5;
 }
 
+.category-icon {
+  margin-right: 0.5rem;
+}
+
 .category-description {
   margin-bottom: 2rem;
 
@@ -1054,6 +1058,31 @@ button {
 
 /* Footer */
 
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: white;
+
+  transform: translateX(5px);
+}
+
 .footer {
   background: #1d3124;
   color: white;
@@ -1063,7 +1092,7 @@ button {
 
 .footer-container {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1.3fr 1.2fr;
+  grid-template-columns: 1.4fr 1fr 1.3fr 1.2fr 1fr;
   gap: 2rem;
 
   max-width: 1200px;

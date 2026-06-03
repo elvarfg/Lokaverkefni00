@@ -29,7 +29,9 @@ function Header({ isDarkMode, onToggleTheme }: HeaderProps) {
         <button
           className={menuOpen ? "hamburger hamburger-open" : "hamburger"}
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Open navigation menu"
+          aria-label={
+            menuOpen ? "Loka leiðsöguvalmynd" : "Opna leiðsöguvalmynd"
+          }
         >
           <span></span>
           <span></span>

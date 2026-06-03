@@ -9,7 +9,11 @@ function Hero() {
 
         <p>Njóttu norrænnar matargerðar í hlýlegu og nútímalegu umhverfi.</p>
 
-        <Link to="/menu" className="hero-button">
+        <Link
+          to="/menu"
+          className="hero-button"
+          aria-label="Skoða matseðil Nordic Bite"
+        >
           Skoða matseðil
         </Link>
 

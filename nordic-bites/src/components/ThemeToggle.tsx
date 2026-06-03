@@ -5,7 +5,13 @@ type ThemeToggleProps = {
 
 function ThemeToggle({ isDarkMode, onToggle }: ThemeToggleProps) {
   return (
-    <button className="theme-toggle" onClick={onToggle}>
+    <button
+      className="theme-toggle"
+      onClick={onToggle}
+      aria-label={
+        isDarkMode ? "Skipta yfir í ljósan ham" : "Skipta yfir í dökkan ham"
+      }
+    >
       {isDarkMode ? "☀️ Light" : "🌙 Dark"}
     </button>
   );
