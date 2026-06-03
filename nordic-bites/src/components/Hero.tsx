@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Counter from "./Counter";
 
 function Hero() {
   return (
@@ -14,12 +15,16 @@ function Hero() {
 
         <div className="hero-stats">
           <div>
-            <strong>4.9★</strong>
+            <strong>
+              <Counter end={4.9} suffix="★" decimals={1} />
+            </strong>
             <span>Í einkunn</span>
           </div>
 
           <div>
-            <strong>1000+</strong>
+            <strong>
+              <Counter end={1000} suffix="+" />
+            </strong>
             <span>Ánægðir gestir</span>
           </div>
 
