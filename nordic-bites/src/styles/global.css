@@ -1356,3 +1356,60 @@ html {
     transform: translateY(0);
   }
 }
+
+/* Back to top */
+
+.back-to-top {
+  position: fixed;
+
+  right: 24px;
+  bottom: 24px;
+
+  width: 52px;
+  height: 52px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #1d3124;
+  color: white;
+
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(20px);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.back-to-top-visible {
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: #2f4f3a;
+
+  transform: translateY(-3px);
+}
+
+.dark-mode .back-to-top {
+  background: #f8f5f0;
+  color: #1d3124;
+}
+
+.dark-mode .back-to-top:hover {
+  background: #d7d0c5;
+}
