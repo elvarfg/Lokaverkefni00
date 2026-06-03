@@ -32,6 +32,8 @@ function Header({ isDarkMode, onToggleTheme }: HeaderProps) {
           aria-label={
             menuOpen ? "Loka leiðsöguvalmynd" : "Opna leiðsöguvalmynd"
           }
+          aria-expanded={menuOpen}
+          aria-controls="main-navigation"
         >
           <span></span>
           <span></span>
@@ -39,7 +41,7 @@ function Header({ isDarkMode, onToggleTheme }: HeaderProps) {
         </button>
       </div>
 
-      <nav className={menuOpen ? "nav nav-open" : "nav"}>
+      <nav id="main-navigation" className={menuOpen ? "nav nav-open" : "nav"}>
         <NavLink
           to="/"
           onClick={closeMenu}

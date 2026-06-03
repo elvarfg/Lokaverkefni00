@@ -22,10 +22,13 @@ function App() {
   return (
     <div className={isDarkMode ? "app dark-mode" : "app"}>
       <ScrollToTop />
+      <a href="#main-content" className="skip-link">
+        Fara beint í efni
+      </a>
 
       <Header isDarkMode={isDarkMode} onToggleTheme={toggleTheme} />
 
-      <main>
+      <main id="main-content">
         <Outlet />
       </main>
 

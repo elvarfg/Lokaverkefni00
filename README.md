@@ -1,5 +1,3 @@
-![Nordic Bite Screenshot](./screenshot.png)
-
 # Nordic Bite 🍽️
 
 React + TypeScript lokaverkefni
@@ -9,6 +7,24 @@ React + TypeScript lokaverkefni
 Nordic Bite er responsive landing page fyrir nýjan veitingastað sem sérhæfir sig í fersku hráefni og norrænni matarmenningu.
 
 ---
+
+## 📸 Screenshots
+
+### Forsíða
+
+![Forsíða](./screenshots/home.png)
+
+### Matseðill
+
+![Menu](./screenshots/menu.png)
+
+### Mobile Navigation
+
+![Mobile Navigation](./screenshots/mobile-nav.png)
+
+### Dark Mode
+
+![Dark Mode](./screenshots/dark-mode.png)
 
 ## 🚀 Tækni
 
