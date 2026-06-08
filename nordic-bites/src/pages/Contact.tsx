@@ -19,7 +19,7 @@ function Contact() {
             <div className="contact-details">
               <p>
                 <strong>Heimilisfang</strong>
-                Matarvegur 12, 101 Reykjavík
+                Laugavegur 12, 101 Reykjavík
               </p>
 
               <p>
@@ -46,7 +46,7 @@ function Contact() {
           <div className="map-card">
             <iframe
               title="Nordic Bite staðsetning"
-              src="https://www.google.com/maps?q=Matarvegur%2012,%20101%20Reykjav%C3%ADk&output=embed"
+              src="https://www.google.com/maps?q=Laugavegur%2012,%20101%20Reykjav%C3%ADk&output=embed"
               loading="lazy"
             ></iframe>
           </div>

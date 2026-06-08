@@ -11,15 +11,15 @@ function Footer() {
 
         <div>
           <h4>Navigation</h4>
-          <Link to="/">Home</Link>
-          <Link to="/menu">Menu</Link>
-          <Link to="/about">About</Link>
-          <Link to="/contact">Contact</Link>
+          <Link to="/">Heim</Link>
+          <Link to="/menu">Matseðill</Link>
+          <Link to="/about">Um Okkur</Link>
+          <Link to="/contact">Hafa Samband</Link>
         </div>
 
         <div>
           <h4>Hafa samband</h4>
-          <p>Matarvegur 12, 101 Reykjavík</p>
+          <p>Laugavegur 12, 101 Reykjavík</p>
           <p>555-4321</p>
           <p>info@nordicbite.is</p>
         </div>

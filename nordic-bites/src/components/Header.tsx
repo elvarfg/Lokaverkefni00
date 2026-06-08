@@ -47,7 +47,7 @@ function Header({ isDarkMode, onToggleTheme }: HeaderProps) {
           onClick={closeMenu}
           className={({ isActive }) => (isActive ? "active-link" : "")}
         >
-          Home
+          Heim
         </NavLink>
 
         <NavLink
@@ -55,7 +55,7 @@ function Header({ isDarkMode, onToggleTheme }: HeaderProps) {
           onClick={closeMenu}
           className={({ isActive }) => (isActive ? "active-link" : "")}
         >
-          Menu
+          Matseðill
         </NavLink>
 
         <NavLink
@@ -63,7 +63,7 @@ function Header({ isDarkMode, onToggleTheme }: HeaderProps) {
           onClick={closeMenu}
           className={({ isActive }) => (isActive ? "active-link" : "")}
         >
-          About
+          Um Okkur
         </NavLink>
 
         <NavLink
@@ -71,7 +71,7 @@ function Header({ isDarkMode, onToggleTheme }: HeaderProps) {
           onClick={closeMenu}
           className={({ isActive }) => (isActive ? "active-link" : "")}
         >
-          Contact
+          Hafa Samband
         </NavLink>
       </nav>
     </header>
